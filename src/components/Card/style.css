@@ -16,3 +16,6 @@ background-color: white;
 .off{
 background-color: black;
 }
+.disabled{
+background-color: blue;
+}
