@@ -5,18 +5,13 @@ import './style.css'
 export default class Card extends Component{
     state = {
         turnedOver: false,
-        isDisabled: false
+        isDisabled: false,
     }
     render(){
-        
-        // let body
-        // if(this.turnedOver){
-        //     body = <div onClick={this.testIt} className="card on"><Digit /></div>
-        // }else{
-        //     body = <div onClick={this.testIt} className="card off"></div>
-        // }
 
-        const {cardDigit} = this.props
+        const {cardDigit, counter} = this.props
+
+        // {counter} на onClick запускает изменение стейта count компонента CardList
 
         const body = this.state.isDisabled ? <div className="card disabled"></div> : (this.state.turnedOver ? <div onClick={() => this.handleTurn()} className="card on"><Digit  cardDigit = {cardDigit} /></div> : <div onClick={() => this.handleTurn()} className="card off"></div>)
         return(
@@ -26,12 +21,14 @@ export default class Card extends Component{
     
     handleTurn = () => {
         this.setState({
-            turnedOver: !this.state.turnedOver
+            turnedOver: !this.state.turnedOver,
         })
+        console.log(this.props.cardDigit)
     }
 
     testIt(){
-        console.log(this.props.cardDigit)
+        // console.log(this.props.cardDigit)
+        // this.state.closeC
     }
 }
 
