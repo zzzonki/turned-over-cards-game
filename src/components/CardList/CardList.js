@@ -19,6 +19,8 @@ class CardList extends PureComponent {
     // }
 
     render(){
+    const count = this.state.count
+
     const {digitArray} = this.props
 
     const digitArray1 = digitArray.slice(0,8)
@@ -27,13 +29,13 @@ class CardList extends PureComponent {
     const digitArray4 = digitArray.slice(24)
     
     const cardDigits1 = digitArray1.map((cardDigit, index) =>
-    <Card cardDigit = {cardDigit} key = {index} counter = {this.incrementCounter.bind(this, index)}/>)
+    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter}/>)
     const cardDigits2 = digitArray2.map((cardDigit, index) =>
-    <Card cardDigit = {cardDigit} key = {index} counter = {this.incrementCounter.bind(this, index)}/>)
+    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter}/>)
     const cardDigits3 = digitArray3.map((cardDigit, index) =>
-    <Card cardDigit = {cardDigit} key = {index} counter = {this.incrementCounter.bind(this, index)}/>)
+    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter}/>)
     const cardDigits4 = digitArray4.map((cardDigit, index) =>
-    <Card cardDigit = {cardDigit} key = {index} counter = {this.incrementCounter.bind(this, index)}/>)
+    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter}/>)
     
     return(
         <div className='card_list'>
@@ -51,12 +53,19 @@ class CardList extends PureComponent {
             </div>
         </div>
     )}
-    incrementCounter = () =>{
-        this.setState({
-            count: this.state.count + 1
-        })
-        console.log(this.state.count)
+    incrementCounter = () => {
+        if(this.state.count < 3)
+            {this.setState({
+                count: this.state.count + 1
+        })} else{
+            this.setState({
+                count: 0
+            })
+        }
+        console.log("count was", this.state.count)
     }
+
+    
 }
 
 export default CardList
