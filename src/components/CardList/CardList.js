@@ -8,15 +8,11 @@ class CardList extends PureComponent {
         super(props)
         // this.closeCards = this.closeCards.bind(this)
         this.state ={
-            count: 0
+            count: 0,
+            firstOpen: 0,
+            secondOpen: 1
         }
     }
-
-    // closeCards() {
-    //         this.setState({
-    //             turnedOver: false
-    //         })
-    // }
 
     render(){
     const count = this.state.count
@@ -29,13 +25,13 @@ class CardList extends PureComponent {
     const digitArray4 = digitArray.slice(24)
     
     const cardDigits1 = digitArray1.map((cardDigit, index) =>
-    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter}/>)
+    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} />)
     const cardDigits2 = digitArray2.map((cardDigit, index) =>
-    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter}/>)
+    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} />)
     const cardDigits3 = digitArray3.map((cardDigit, index) =>
-    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter}/>)
+    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} />)
     const cardDigits4 = digitArray4.map((cardDigit, index) =>
-    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter}/>)
+    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} />)
     
     return(
         <div className='card_list'>
@@ -53,6 +49,7 @@ class CardList extends PureComponent {
             </div>
         </div>
     )}
+
     incrementCounter = () => {
         if(this.state.count < 3)
             {this.setState({
@@ -65,7 +62,20 @@ class CardList extends PureComponent {
         console.log("count was", this.state.count)
     }
 
-    
+    getFirst = (value) =>{
+        this.setState({firstOpen: value})
+    }
+    getSecond = (value) =>{
+        this.setState({secondOpen: value})
+    }
+
+    componentDidUpdate(){
+        if(this.state.firstOpen === this.state.secondOpen){
+            console.log('yes', this.state.firstOpen, this.state.secondOpen)
+        } else{
+            console.log('no', this.state.firstOpen, this.state.secondOpen)
+        }
+    }
 }
 
 export default CardList
