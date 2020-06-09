@@ -6,7 +6,6 @@ class CardList extends PureComponent {
 
     constructor(props){
         super(props)
-        // this.closeCards = this.closeCards.bind(this)
         this.state ={
             count: 0,
             firstOpen: 0,
