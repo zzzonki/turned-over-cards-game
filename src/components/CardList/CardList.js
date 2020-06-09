@@ -8,8 +8,8 @@ class CardList extends PureComponent {
         super(props)
         this.state ={
             count: 0,
-            firstOpen: 0,
-            secondOpen: 1
+            firstOpen: 88,
+            secondOpen: 99
         }
     }
 
@@ -33,7 +33,7 @@ class CardList extends PureComponent {
     <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} />)
     
     return(
-        <div className='card_list'>
+        <div className='card_list' onClick={() => this.bgCount()}>
             <div className='card_line'>
                 {cardDigits1}
             </div>
@@ -59,6 +59,16 @@ class CardList extends PureComponent {
             })
         }
         console.log("count was", this.state.count)
+    }
+
+    bgCount = () => {
+        if(this.state.count >= 2){
+            this.setState({
+                count: 3
+            })
+        } else{
+            return
+        }
     }
 
     getFirst = (value) =>{
