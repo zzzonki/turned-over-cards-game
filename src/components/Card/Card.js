@@ -56,6 +56,9 @@ export default class Card extends PureComponent{
             console.log('count is', count)
             return
         }
+        if(this.props.cardDigit === this.props.secondOpen && this.props.cardDigit === this.props.firstOpen){
+            this.setState({isDisabled: true})
+        }
     }
 }
 

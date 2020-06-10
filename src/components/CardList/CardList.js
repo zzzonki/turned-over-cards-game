@@ -24,13 +24,13 @@ class CardList extends PureComponent {
     const digitArray4 = digitArray.slice(24)
     
     const cardDigits1 = digitArray1.map((cardDigit, index) =>
-    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} />)
+    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} firstOpen = {this.state.firstOpen} secondOpen = {this.state.secondOpen} />)
     const cardDigits2 = digitArray2.map((cardDigit, index) =>
-    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} />)
+    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} firstOpen = {this.state.firstOpen} secondOpen = {this.state.secondOpen} />)
     const cardDigits3 = digitArray3.map((cardDigit, index) =>
-    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} />)
+    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} firstOpen = {this.state.firstOpen} secondOpen = {this.state.secondOpen} />)
     const cardDigits4 = digitArray4.map((cardDigit, index) =>
-    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} />)
+    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} firstOpen = {this.state.firstOpen} secondOpen = {this.state.secondOpen} />)
     
     return(
         <div className='card_list' onClick={() => this.bgCount()}>
