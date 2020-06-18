@@ -11,10 +11,10 @@ align-items: center;
 margin: 10px;
 }
 .on{
-background-color: white;
+background-color: rgba(255, 255, 255, 0.7);
 }
 .off{
-background-color: black;
+background-color: rgba(0, 0, 0, 0.7);
 }
 .disabled{
 background-color: rgba(0, 0, 0, 0);
