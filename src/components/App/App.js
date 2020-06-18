@@ -1,5 +1,7 @@
 import React from 'react';
 import CardList from '../CardList'
+import Info from '../Info'
+import './style.css'
 
 function App() {
   const digitArray = []
@@ -14,6 +16,7 @@ function App() {
 
   return (
     <div className="App">
+      <Info />
       <CardList digitArray = {digitArray} />
     </div>
   );

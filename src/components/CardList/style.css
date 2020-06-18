@@ -1,6 +1,7 @@
 .card_list{
     display: flex;
     flex-direction: column;
+    margin-right: 200px;
 
 }
 .card_line{
