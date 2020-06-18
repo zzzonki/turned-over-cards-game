@@ -9,7 +9,8 @@ class CardList extends PureComponent {
         this.state ={
             count: 0,
             firstOpen: 88,
-            secondOpen: 99
+            secondOpen: 99,
+            finishCount: 0
         }
     }
 
@@ -24,13 +25,13 @@ class CardList extends PureComponent {
     const digitArray4 = digitArray.slice(24)
     
     const cardDigits1 = digitArray1.map((cardDigit, index) =>
-    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} firstOpen = {this.state.firstOpen} secondOpen = {this.state.secondOpen} />)
+    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} firstOpen = {this.state.firstOpen} secondOpen = {this.state.secondOpen} finishCounter = {this.finishCounter} finishCount = {this.state.finishCount} />)
     const cardDigits2 = digitArray2.map((cardDigit, index) =>
-    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} firstOpen = {this.state.firstOpen} secondOpen = {this.state.secondOpen} />)
+    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} firstOpen = {this.state.firstOpen} secondOpen = {this.state.secondOpen} finishCounter = {this.finishCounter} finishCount = {this.state.finishCount} />)
     const cardDigits3 = digitArray3.map((cardDigit, index) =>
-    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} firstOpen = {this.state.firstOpen} secondOpen = {this.state.secondOpen} />)
+    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} firstOpen = {this.state.firstOpen} secondOpen = {this.state.secondOpen} finishCounter = {this.finishCounter} finishCount = {this.state.finishCount} />)
     const cardDigits4 = digitArray4.map((cardDigit, index) =>
-    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} firstOpen = {this.state.firstOpen} secondOpen = {this.state.secondOpen} />)
+    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} firstOpen = {this.state.firstOpen} secondOpen = {this.state.secondOpen} finishCounter = {this.finishCounter} finishCount = {this.state.finishCount} />)
     
     return(
         <div className='card_list' onClick={() => this.bgCount()}>
@@ -59,6 +60,20 @@ class CardList extends PureComponent {
             })
         }
         console.log("count was", this.state.count)
+    }
+
+    finishCounter = () => {
+        if(this.state.finishCount <15){
+            this.setState({
+                finishCount: this.state.finishCount + 1
+            })
+        } else{
+            alert('well done')
+            this.setState({
+                finishCount: 0
+            })
+        }
+
     }
 
     bgCount = () => {
