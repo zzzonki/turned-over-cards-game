@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
 import Rules from '../Rules'
+import Timer from '../Timer'
 import './style.css'
 
 export default class Info extends Component{
-    state ={
+    state = {
         rulesOn: false
     }
     render(){
@@ -21,6 +22,7 @@ export default class Info extends Component{
             <div className='info_wrapper'>
                <Rules rulesOn={this.state.rulesOn} toggleRules={this.toggleRules}/>
                {body}
+               <Timer />
             </div>
         )
     }
