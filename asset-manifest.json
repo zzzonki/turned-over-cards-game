@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/turned-over-cards-game/static/css/main.7cfed3a8.chunk.css",
+    "main.css": "/turned-over-cards-game/static/css/main.5e619176.chunk.css",
     "main.js": "/turned-over-cards-game/static/js/main.29e50371.chunk.js",
     "main.js.map": "/turned-over-cards-game/static/js/main.29e50371.chunk.js.map",
     "runtime-main.js": "/turned-over-cards-game/static/js/runtime-main.c4e8603b.js",
@@ -8,15 +8,15 @@
     "static/js/2.65457f84.chunk.js": "/turned-over-cards-game/static/js/2.65457f84.chunk.js",
     "static/js/2.65457f84.chunk.js.map": "/turned-over-cards-game/static/js/2.65457f84.chunk.js.map",
     "index.html": "/turned-over-cards-game/index.html",
-    "precache-manifest.a53f4cea4f3f0ef6c224d58f56dedb16.js": "/turned-over-cards-game/precache-manifest.a53f4cea4f3f0ef6c224d58f56dedb16.js",
+    "precache-manifest.b510f8eade734c65b7ed985efb72eebf.js": "/turned-over-cards-game/precache-manifest.b510f8eade734c65b7ed985efb72eebf.js",
     "service-worker.js": "/turned-over-cards-game/service-worker.js",
-    "static/css/main.7cfed3a8.chunk.css.map": "/turned-over-cards-game/static/css/main.7cfed3a8.chunk.css.map",
+    "static/css/main.5e619176.chunk.css.map": "/turned-over-cards-game/static/css/main.5e619176.chunk.css.map",
     "static/js/2.65457f84.chunk.js.LICENSE.txt": "/turned-over-cards-game/static/js/2.65457f84.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c4e8603b.js",
     "static/js/2.65457f84.chunk.js",
-    "static/css/main.7cfed3a8.chunk.css",
+    "static/css/main.5e619176.chunk.css",
     "static/js/main.29e50371.chunk.js"
   ]
 }

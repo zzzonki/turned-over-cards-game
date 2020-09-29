@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/turned-over-cards-game/precache-manifest.a53f4cea4f3f0ef6c224d58f56dedb16.js"
+  "/turned-over-cards-game/precache-manifest.b510f8eade734c65b7ed985efb72eebf.js"
 );
 
 self.addEventListener('message', (event) => {
