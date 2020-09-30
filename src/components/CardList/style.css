@@ -1,9 +1,32 @@
-.card_list{
+/* .card_list{
     display: flex;
     flex-direction: column;
     margin-right: 200px;
+} */
 
+@media screen and (min-width: 960px){
+    .card_list{
+        margin-right: 200px;
+    }
+}
+@media screen and (min-width: 551px) and (max-width: 959px){
+    .card_list{
+        display: flex;
+        flex-direction: column;
+    }
 }
 .card_line{
     display: flex;
+}
+@media screen and ((max-width: 550px), (orientation: portrait)){
+    .card_list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card_line{
+        display: flex;
+        /* flex-direction: column; */
+    }
 }

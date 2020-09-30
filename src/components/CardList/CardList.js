@@ -68,10 +68,10 @@ class CardList extends PureComponent {
                 finishCount: this.state.finishCount + 1
             })
         } else{
-            alert('well done')
             this.setState({
                 finishCount: 0
             })
+            alert('well done')
         }
 
     }
