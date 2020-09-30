@@ -18,7 +18,7 @@
 .card_line{
     display: flex;
 }
-@media screen and ((max-width: 550px), (orientation: portrait)){
+@media screen and (max-width: 550px), (orientation: portrait){
     .card_list{
         display: flex;
         flex-direction: column;
@@ -27,6 +27,5 @@
     }
     .card_line{
         display: flex;
-        /* flex-direction: column; */
     }
 }
