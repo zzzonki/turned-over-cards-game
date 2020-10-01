@@ -14,10 +14,10 @@ export default class Timer extends Component{
         const minutes = this.state.mins < 10 ? "0" + this.state.mins : this.state.mins
         const seconds = this.state.secs < 10 ? "0" + this.state.secs : this.state.secs
         return(
-            <div>
+            <>
                 <h3>Timer</h3>
                 <div className='timer-field'>{minutes} : {seconds}</div>
-            </div>
+            </>
         )
     }
     timerGo = () =>{

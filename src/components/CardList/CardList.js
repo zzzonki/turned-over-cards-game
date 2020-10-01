@@ -4,14 +4,11 @@ import './style.css'
 
 class CardList extends PureComponent {
 
-    constructor(props){
-        super(props)
-        this.state ={
-            count: 0,
-            firstOpen: 88,
-            secondOpen: 99,
-            finishCount: 0
-        }
+    state = {
+        count: 0,
+        firstOpen: 88,
+        secondOpen: 99,
+        finishCount: 0
     }
 
     render(){

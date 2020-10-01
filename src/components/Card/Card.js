@@ -3,12 +3,10 @@ import Digit from '../Digit'
 import './style.css'
 
 export default class Card extends PureComponent{
-    constructor(props){
-        super(props)
-        this.state = {
-            turnedOver: false,
-            isDisabled: false
-        }
+    
+    state = {
+        turnedOver: false,
+        isDisabled: false
     }
     
     render(){
