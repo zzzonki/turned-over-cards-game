@@ -22,7 +22,7 @@ export default class Info extends Component{
             <div className='info_wrapper'>
                <Rules rulesOn={this.state.rulesOn} toggleRules={this.toggleRules}/>
                {body}
-               <Timer />
+               <Timer gamePause={this.props.gamePause} gameStart={this.props.gameStart} />
             </div>
         )
     }

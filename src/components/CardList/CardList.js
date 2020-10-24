@@ -74,6 +74,9 @@ class CardList extends PureComponent {
     }
 
     bgCount = () => {
+        if(!this.props.gameStart){
+            this.props.gameStarter()
+        }
         if(this.state.count >= 2){
             this.setState({
                 count: 3
