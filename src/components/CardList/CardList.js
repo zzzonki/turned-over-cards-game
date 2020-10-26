@@ -22,13 +22,13 @@ class CardList extends PureComponent {
     const digitArray4 = digitArray.slice(24)
     
     const cardDigits1 = digitArray1.map((cardDigit, index) =>
-    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} firstOpen = {this.state.firstOpen} secondOpen = {this.state.secondOpen} finishCounter = {this.finishCounter} finishCount = {this.state.finishCount} />)
+    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} firstOpen = {this.state.firstOpen} secondOpen = {this.state.secondOpen} finishCounter = {this.finishCounter} finishCount = {this.state.finishCount} gameStarter = {this.props.gameStarter} gameStart = {this.props.gameStart} />)
     const cardDigits2 = digitArray2.map((cardDigit, index) =>
-    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} firstOpen = {this.state.firstOpen} secondOpen = {this.state.secondOpen} finishCounter = {this.finishCounter} finishCount = {this.state.finishCount} />)
+    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} firstOpen = {this.state.firstOpen} secondOpen = {this.state.secondOpen} finishCounter = {this.finishCounter} finishCount = {this.state.finishCount} gameStarter = {this.props.gameStarter} gameStart = {this.props.gameStart} />)
     const cardDigits3 = digitArray3.map((cardDigit, index) =>
-    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} firstOpen = {this.state.firstOpen} secondOpen = {this.state.secondOpen} finishCounter = {this.finishCounter} finishCount = {this.state.finishCount} />)
+    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} firstOpen = {this.state.firstOpen} secondOpen = {this.state.secondOpen} finishCounter = {this.finishCounter} finishCount = {this.state.finishCount} gameStarter = {this.props.gameStarter} gameStart = {this.props.gameStart} />)
     const cardDigits4 = digitArray4.map((cardDigit, index) =>
-    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} firstOpen = {this.state.firstOpen} secondOpen = {this.state.secondOpen} finishCounter = {this.finishCounter} finishCount = {this.state.finishCount} />)
+    <Card cardDigit = {cardDigit} key = {index} count={count} counter = {this.incrementCounter} getFirst = {this.getFirst} getSecond = {this.getSecond} firstOpen = {this.state.firstOpen} secondOpen = {this.state.secondOpen} finishCounter = {this.finishCounter} finishCount = {this.state.finishCount} gameStarter = {this.props.gameStarter} gameStart = {this.props.gameStart} />)
     
     return(
         <div className='card_list' onClick={() => this.bgCount()}>
@@ -74,9 +74,6 @@ class CardList extends PureComponent {
     }
 
     bgCount = () => {
-        if(!this.props.gameStart){
-            this.props.gameStarter()
-        }
         if(this.state.count >= 2){
             this.setState({
                 count: 3

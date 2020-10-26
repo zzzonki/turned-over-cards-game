@@ -29,6 +29,9 @@ export default class Card extends PureComponent{
     }
 
     handleClick = () => {
+        if(!this.props.gameStart){
+            this.props.gameStarter()
+        }
         this.handleTurn()
         this.props.counter()
         if(this.props.count === 0){
