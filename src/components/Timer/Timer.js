@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react'
-import'./style.css'
+import'./style.scss'
 
 export default class Timer extends PureComponent{
     state = {
@@ -32,11 +32,12 @@ export default class Timer extends PureComponent{
     render(){
         const minutes = this.state.mins < 10 ? "0" + this.state.mins : this.state.mins
         const seconds = this.state.secs < 10 ? "0" + this.state.secs : this.state.secs
+        const going = this.props.gameStart ? 'timer-field timer-field_go' : 'timer-field'
         return(
             <>
                 <h3>Timer</h3>
-                <div className='timer-field' onClick={() => this.timerGo()}>{minutes} : {seconds}</div>
-            </>
+                <div className={going} onClick={() => this.timerGo()}>{minutes} : {seconds}</div>
+            </> 
         )
     }
     timerGo = () =>{

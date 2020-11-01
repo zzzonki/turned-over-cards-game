@@ -1,0 +1,21 @@
+@import '../../vars_mixins.scss';
+
+.timer-field{
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 400ms;
+    &.timer-field_go{
+        width: 130px;
+        height: 40px;
+        border: 2px solid $theme-color;
+        border-radius: 20px;
+        font-size: 24px;
+        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    }
+}
