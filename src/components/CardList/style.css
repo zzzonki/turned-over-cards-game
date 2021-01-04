@@ -17,6 +17,7 @@
 }
 .card_line{
     display: flex;
+    align-items: center;
 }
 @media screen and (max-width: 550px), (orientation: portrait){
     .card_list{

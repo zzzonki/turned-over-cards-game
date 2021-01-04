@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react'
 import Digit from '../Digit'
-import './style.css'
+import './style.scss'
 
 export default class Card extends PureComponent{
     

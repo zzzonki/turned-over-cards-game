@@ -15,14 +15,17 @@ export default class Info extends Component{
             <li>remember what they are</li>
             <li>turn them down</li> 
             <li>find all pairs</li>
+            <li>click on timer to pause</li>
+            <li>click on any card to resume</li>
             <li>proftt!</li>
         </ul>
         </div> : ""
+        const timer = this.state.rulesOn ? "" : <Timer gamePause={this.props.gamePause} gameStart={this.props.gameStart} />
         return(
             <div className='info_wrapper'>
                <Rules rulesOn={this.state.rulesOn} toggleRules={this.toggleRules}/>
                {body}
-               <Timer gamePause={this.props.gamePause} gameStart={this.props.gameStart} />
+               {timer}
             </div>
         )
     }
