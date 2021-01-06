@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/turned-over-cards-game/static/css/main.5e619176.chunk.css",
-    "main.js": "/turned-over-cards-game/static/js/main.29e50371.chunk.js",
-    "main.js.map": "/turned-over-cards-game/static/js/main.29e50371.chunk.js.map",
-    "runtime-main.js": "/turned-over-cards-game/static/js/runtime-main.c4e8603b.js",
-    "runtime-main.js.map": "/turned-over-cards-game/static/js/runtime-main.c4e8603b.js.map",
-    "static/js/2.65457f84.chunk.js": "/turned-over-cards-game/static/js/2.65457f84.chunk.js",
-    "static/js/2.65457f84.chunk.js.map": "/turned-over-cards-game/static/js/2.65457f84.chunk.js.map",
-    "index.html": "/turned-over-cards-game/index.html",
-    "precache-manifest.b510f8eade734c65b7ed985efb72eebf.js": "/turned-over-cards-game/precache-manifest.b510f8eade734c65b7ed985efb72eebf.js",
-    "service-worker.js": "/turned-over-cards-game/service-worker.js",
-    "static/css/main.5e619176.chunk.css.map": "/turned-over-cards-game/static/css/main.5e619176.chunk.css.map",
-    "static/js/2.65457f84.chunk.js.LICENSE.txt": "/turned-over-cards-game/static/js/2.65457f84.chunk.js.LICENSE.txt"
+    "main.css": "/static/css/main.0b76b8ee.chunk.css",
+    "main.js": "/static/js/main.87a6559c.chunk.js",
+    "main.js.map": "/static/js/main.87a6559c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.59bf84fb.js",
+    "runtime-main.js.map": "/static/js/runtime-main.59bf84fb.js.map",
+    "static/js/2.65457f84.chunk.js": "/static/js/2.65457f84.chunk.js",
+    "static/js/2.65457f84.chunk.js.map": "/static/js/2.65457f84.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.8ab608d0bce8b6c5b6d8bfcd1bb4bbfc.js": "/precache-manifest.8ab608d0bce8b6c5b6d8bfcd1bb4bbfc.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.0b76b8ee.chunk.css.map": "/static/css/main.0b76b8ee.chunk.css.map",
+    "static/js/2.65457f84.chunk.js.LICENSE.txt": "/static/js/2.65457f84.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c4e8603b.js",
+    "static/js/runtime-main.59bf84fb.js",
     "static/js/2.65457f84.chunk.js",
-    "static/css/main.5e619176.chunk.css",
-    "static/js/main.29e50371.chunk.js"
+    "static/css/main.0b76b8ee.chunk.css",
+    "static/js/main.87a6559c.chunk.js"
   ]
 }
