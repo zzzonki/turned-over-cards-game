@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Rules from '../Rules'
 import Timer from '../Timer'
-import './style.css'
+import './style.scss'
 
 export default class Info extends Component{
     state = {
@@ -20,12 +20,14 @@ export default class Info extends Component{
             <li>proftt!</li>
         </ul>
         </div> : ""
-        const timer = this.state.rulesOn ? "" : <Timer gamePause={this.props.gamePause} gameStart={this.props.gameStart} />
+        const display = this.state.rulesOn ? "hidden" : ""
         return(
             <div className='info_wrapper'>
-               <Rules rulesOn={this.state.rulesOn} toggleRules={this.toggleRules}/>
-               {body}
-               {timer}
+                <Rules rulesOn={this.state.rulesOn} toggleRules={this.toggleRules}/>
+                {body}
+                <div className={display}>
+                    <Timer gamePause={this.props.gamePause} gameStart={this.props.gameStart} />
+                </div>
             </div>
         )
     }

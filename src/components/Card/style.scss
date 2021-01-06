@@ -11,6 +11,7 @@ justify-content: center;
 align-items: center;
 margin: 10px;
 cursor: pointer;
+transition: 400ms;
 
     @media screen and (max-width: 550px){
         width: $card-width * 0.7;
@@ -32,10 +33,12 @@ cursor: pointer;
         height: $card-height * 1.1;
         margin: (10px - ($card-height * 0.05)) (10px - ($card-width * 0.05));
         }
+
     &.off{
         background-color: rgba(0, 0, 0, 0.7);
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     }
+    
     &.disabled{
         background-color: rgba(0, 0, 0, 0);
     }
