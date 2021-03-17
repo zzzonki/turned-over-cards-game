@@ -34,10 +34,10 @@ export default class Timer extends PureComponent{
         const seconds = this.state.secs < 10 ? "0" + this.state.secs : this.state.secs
         const going = this.props.gameStart ? 'timer-field timer-field_go' : 'timer-field'
         return(
-            <>
+            <div className='timer'>
                 <h3>Timer</h3>
                 <div className={going} onClick={() => this.timerGo()}>{minutes} : {seconds}</div>
-            </> 
+            </div> 
         )
     }
     timerGo = () =>{

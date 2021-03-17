@@ -8,7 +8,7 @@ export default class Info extends Component{
         rulesOn: false
     }
     render(){
-        const body = this.state.rulesOn ? <div>
+        const body = this.state.rulesOn ? <div className="info_how-to">
         <h3>How to play:</h3>
         <ul>
             <li>choose 2 cards</li>

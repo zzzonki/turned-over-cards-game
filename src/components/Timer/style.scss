@@ -1,4 +1,9 @@
 @import '../../vars_mixins.scss';
+@import '../../animations.scss';
+
+.timer{
+    animation: show 1s ease;
+}
 
 .timer-field{
     width: 100px;

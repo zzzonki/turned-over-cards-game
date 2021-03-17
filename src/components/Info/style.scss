@@ -1,3 +1,6 @@
+@import '../../vars_mixins.scss';
+@import '../../animations.scss';
+
 .info_wrapper{
     width: 200px;
     margin-top: 20px;
@@ -7,4 +10,7 @@
 }
 .hidden{
     display: none;
+}
+.info_how-to{
+    animation: show 1s ease;
 }
