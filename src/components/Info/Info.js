@@ -17,7 +17,7 @@ export default class Info extends Component{
             <li>find all pairs</li>
             <li>click on timer to pause</li>
             <li>click on any card to resume</li>
-            <li>proftt!</li>
+            <li>profit!</li>
         </ul>
         </div> : ""
         const display = this.state.rulesOn ? "hidden" : ""
