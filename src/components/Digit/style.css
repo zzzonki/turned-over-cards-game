@@ -1,9 +1,0 @@
-.digit{
-    font-family: serif;
-    font-size: 40px;
-}
-@media screen and (max-width: 550px), (orientation: portrait){
-    .digit{    
-        font-size: 34px;
-    }
-}
