@@ -33,41 +33,16 @@ export default class Timer extends PureComponent{
         const minutes = this.state.mins < 10 ? "0" + this.state.mins : this.state.mins
         const seconds = this.state.secs < 10 ? "0" + this.state.secs : this.state.secs
         const going = this.props.gameStart ? 'timer-field timer-field_go' : 'timer-field'
+        const pause = this.props.gameStart ? <img title="pause" src={require("./icons/pause.png")} /> : ''
         return(
             <div className='timer'>
                 <h3>Timer</h3>
-                <div className={going} onClick={() => this.timerGo()}>{minutes} : {seconds}</div>
+                <div className={going} onClick={() => this.timerGo()}>{minutes} : {seconds} {pause}</div>
             </div> 
         )
     }
     timerGo = () =>{
-        // this.setState({
-        //     gameStart: !this.state.gameStart
-        // })
-        // setTimeout(() => {
-        //     if(this.state.gameStart){
-        //        this.timerId = setInterval(() => {
-        //             if (this.state.secs >= 59) {
-        //                 this.setState({
-        //                     secs: 0,
-        //                     mins: this.state.mins + 1
-        //                 })
-        //             } else{
-        //                 this.setState({ 
-        //                     secs: this.state.secs + 1
-        //                 })
-        //             }
-        //             console.log('interval', this.timerId, 'is set')
-        //         }, 1000)
-        //         } else{
-        //             clearInterval(this.timerId)
-        //             console.log('interval', this.timerId, 'is cleared')
-        //         }
-        // }, 1);
-
-        this.props.gamePause()
-        
-        
+        this.props.gamePause()    
     }
     
 }
