@@ -18,7 +18,7 @@ class App extends Component{
       for (let i = 1; i < 17; i++) {
           digitArray.push(i)    
       }
-      //digitArray.sort((a, b) => a > b ? Math.random() - 0.5 : -(Math.random() - 0.5))
+      digitArray.sort((a, b) => a > b ? Math.random() - 0.5 : -(Math.random() - 0.5))
       console.log('app', digitArray)
       this.setState({
         digitArray: digitArray
