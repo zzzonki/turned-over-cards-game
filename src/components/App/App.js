@@ -6,7 +6,8 @@ import './style.css'
 class App extends Component{
   state={
     gameStart: false,
-    digitArray: []
+    digitArray: [],
+    currentTime: ''
   }
 
   componentDidMount(){
@@ -17,7 +18,7 @@ class App extends Component{
       for (let i = 1; i < 17; i++) {
           digitArray.push(i)    
       }
-      digitArray.sort((a, b) => a > b ? Math.random() - 0.5 : -(Math.random() - 0.5))
+      //digitArray.sort((a, b) => a > b ? Math.random() - 0.5 : -(Math.random() - 0.5))
       console.log('app', digitArray)
       this.setState({
         digitArray: digitArray
@@ -28,8 +29,8 @@ class App extends Component{
 
     return (
       <div className="App">
-        <Info gamePause={this.gamePause} gameStart={this.state.gameStart} />
-        <CardList digitArray = {this.state.digitArray} gameStarter={this.gameStarter} gameStart={this.state.gameStart} />
+        <Info gamePause={this.gamePause} gameStart={this.state.gameStart} getTime={this.getTime} />
+        <CardList digitArray = {this.state.digitArray} gameStarter={this.gameStarter} gameStart={this.state.gameStart} currentTime={this.state.currentTime} />
       </div>
     )
   }
@@ -44,6 +45,13 @@ class App extends Component{
           gameStart: false
       })
   }
+
+  getTime = (m, s) =>{
+      this.setState({
+          currentTime: m+':'+s
+      })
+  }
+
 }
 
 export default App;

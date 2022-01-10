@@ -8,7 +8,9 @@ class CardList extends PureComponent {
         count: 0,
         firstOpen: 88,
         secondOpen: 99,
-        finishCount: 0
+        finishCount: 0,
+        currentTime: '',
+        currentSteps: 0
     }
 
     render(){
@@ -53,7 +55,8 @@ class CardList extends PureComponent {
                 count: this.state.count + 1
         })} else{
             this.setState({
-                count: 0
+                count: 0,
+                currentSteps: this.state.currentSteps + 1
             })
         }
         console.log("count was", this.state.count)
@@ -66,9 +69,13 @@ class CardList extends PureComponent {
             })
         } else{
             this.setState({
-                finishCount: 0
+                finishCount: 0,
+                currentTime: this.props.currentTime
             })
-            alert('well done')
+            setTimeout(() => {
+                alert('well done. ur time is ', this.state.currentTime, 'u finished in ', this.state.currentSteps, ' steps')
+                console.log('well done. ur time is', this.state.currentTime, 'u finished in', this.state.currentSteps, 'steps')
+            }, 1);
         }
 
     }
