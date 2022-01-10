@@ -26,7 +26,7 @@ export default class Info extends Component{
                 <Rules rulesOn={this.state.rulesOn} toggleRules={this.toggleRules}/>
                 {body}
                 <div className={display}>
-                    <Timer gamePause={this.props.gamePause} gameStart={this.props.gameStart} />
+                    <Timer gamePause={this.props.gamePause} gameStart={this.props.gameStart} getTime={this.props.getTime} />
                 </div>
             </div>
         )

@@ -26,6 +26,7 @@ export default class Timer extends PureComponent{
                  clearTimeout(this.timerId)
                  console.log('interval', this.timerId, 'is cleared')
              }
+             this.getTime(this.state.mins, this.state.secs)
         console.log(this.props.gameStart)
     }
 
@@ -44,5 +45,8 @@ export default class Timer extends PureComponent{
     timerGo = () =>{
         this.props.gamePause()    
     }
-    
+    getTime = (m, s) =>{
+        this.props.getTime(m, s)
+        console.log("time: ", m, " - ", s)
+    }
 }
